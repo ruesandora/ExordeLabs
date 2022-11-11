@@ -112,7 +112,9 @@ screen -XS screenadı quit
 pkill screen
 ```
 
+## Böylede bir tokenomics var, detaylı incelemedim:
 
+![image](https://user-images.githubusercontent.com/101149671/201303557-755bcdc8-47f6-4a3e-a1a1-941e62342a37.png)
 
 
 
