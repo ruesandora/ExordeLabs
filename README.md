@@ -56,6 +56,7 @@ git clone https://github.com/exorde-labs/ExordeModuleCLI.git
 
 ## Burası uzun bir yükleme sürecek:
 ```
+sudo su
 cd ExordeModuleCLI
 docker build -t exorde-cli .
 ```
