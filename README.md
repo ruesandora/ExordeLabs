@@ -75,10 +75,9 @@ docker run -it exorde-cli -m metamask -l 2
 
 ## Ve gördüğünüz gibi çalışıyor:
 
- * Notlar kısmında belirttiğim hatay
+ * [Notlar](https://github.com/ruesandora/ExordeLabs#gerekli-notlar) kısmında belirttiğim hatayı alırsanız tekrar denemekten başka çare yok.
 
 ![image](https://user-images.githubusercontent.com/101149671/201302924-3d6c7127-6343-47fc-853b-353715b3e018.png)
-
 
 
 ## Gerekli komutlar:
