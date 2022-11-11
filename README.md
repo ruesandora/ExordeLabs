@@ -22,6 +22,13 @@
  * Bunları anladığınız anda tüm nodeları kendiniz kurabilirsiniz, sorularınız için discord kanalı mevcut.
  * Rehberler ve sorular için: [Discord kanalı](discord.gg/ruescommunity)
 
+## Gerekli notlar:
+
+ * Bugün node kuranlar Kasım 22'e kadar %5 fazla ödül alacak
+ * Testnet Şubat ayına kadar sürecek. (ekibin söylediği)
+ * Hala ağ stabil çalışmıyor "Please try restarting your application." gibi hatalar alırsanız endişe etmeyin, tekrar deneyin.
+ * Skale Network'ü bilirsiniz, (BlockPI ile Klaynt gibi düşünebilirsiniz..) ona bağlı olduğu için tek tük hatalar olur.
+
 ## Sistem gereksinimi:
 
  * Net bilgi yok, kendim test ettim:
@@ -65,6 +72,12 @@ screen -S exorde
 ```
 docker run -it exorde-cli -m metamask -l 2
 ```
+
+## Ve gördüğünüz gibi çalışıyor:
+
+ * Notlar kısmında belirttiğim hatay
+
+![image](https://user-images.githubusercontent.com/101149671/201302924-3d6c7127-6343-47fc-853b-353715b3e018.png)
 
 
 
