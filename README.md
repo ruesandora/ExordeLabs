@@ -54,11 +54,10 @@ sudo apt install -y build-essential libssl-dev libffi-dev git curl screen
 git clone https://github.com/exorde-labs/ExordeModuleCLI.git
 ```
 
-## Burası uzun bir yükleme sürecek:
+## Metamask yazdığım yere 0xli başlayan metamask adresi giriyoruz:
+* Testnet cüzdanı kullanın
 ```
-sudo su
-cd ExordeModuleCLI
-docker build -t exorde-cli .
+docker run -d --restart unless-stopped --pull always --name exorde-cli rg.fr-par.scw.cloud/exorde-labs/exorde-cli -m MetamaskAdres -l 4
 ```
 
 ## Bir screen açıyoruz:
@@ -66,12 +65,17 @@ docker build -t exorde-cli .
 screen -S exorde
 ```
 
-## Metamask yazdığım yere 0xli başlayan metamask adresi giriyoruz:
+## Aşağıdaki işlemleri Screen içinde yapıyoruz:
 
  * Testnet cüzdanı kullanın
+ * Screen içine giriyoruz önce aşağıdaki komudu yazıp yeni Container_ID kullanacağız.. Container_ID yazan yere ID'nizi yazın!
+![image](https://user-images.githubusercontent.com/99053148/202844709-b078b77d-f813-4d2f-bc46-1a6eb2cab21c.png)
 
 ```
-docker run -it exorde-cli -m metamask -l 2
+docker ps
+```
+```
+docker logs --follow Container_ID
 ```
 
 ## Ve gördüğünüz gibi çalışıyor:
@@ -83,6 +87,24 @@ docker run -it exorde-cli -m metamask -l 2
 
 ![image](https://user-images.githubusercontent.com/101149671/201302924-3d6c7127-6343-47fc-853b-353715b3e018.png)
 
+## Node sıfırlayıp yeniden kurmak için ne yapmam lazım:
+* Önce CTRL + C ile screen içindeki nodu durdurup Ctrl A+D ile screen dışına çıkıyoruz
+* Sıra ile aşağıdaki komutları girin Yeni Docker Container oluştuyoruz 
+* Container_ID yazan yere ID'nizi yazın!
+![image](https://user-images.githubusercontent.com/99053148/202844795-3e1c6645-27a8-4f58-b16a-44deff1e8c13.png)
+
+```
+docker ps
+```
+```
+docker stop Container_ID
+```
+```
+docker rm Container_ID
+```
+```
+docker run -d --restart unless-stopped --pull always --name exorde-cli rg.fr-par.scw.cloud/exorde-labs/exorde-cli -m MetamaskAdres -l 4
+```
 
 ## Gerekli komutlar:
 
