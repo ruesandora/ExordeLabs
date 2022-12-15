@@ -12,7 +12,7 @@
  * [Exorde Discord Kanalı](https://discord.gg/44KzbSWB)
  * [Sıralama](https://explorer.exorde.network/leaderboard) ve [Explorer](https://explorer.exorde.network/)
  * Video rehberi gün içinde gelecek
- * Sohbet ve sorular için [Discord](discord.gg/ruescommunity) ve [Telegram](https://t.me/RuesChat) kanallarımız
+ * Sohbet ve sorular için [Discord](https://discord.gg/ruescommunity) ve [Telegram](https://t.me/RuesChat) kanallarımız
 
 ## NOT (ilk defa node kuranlar):
 
@@ -20,7 +20,7 @@
  * Sanal sunucu kullanıyoruz, ücretli/ücretsiz sunucular mevcut.
  * Discord kanalımda sunucu nedir, node nedir, nasıl bağlanılır bu 3 temel konu hakkında video ve makale mevcut
  * Bunları anladığınız anda tüm nodeları kendiniz kurabilirsiniz, sorularınız için discord kanalı mevcut.
- * Rehberler ve sorular için: [Discord kanalı](discord.gg/ruescommunity)
+ * Rehberler ve sorular için: [Discord kanalı](https://discord.gg/ruescommunity)
 
 ## Gerekli notlar:
 
