@@ -71,7 +71,12 @@ screen -S exorde
  * Testnet cüzdanı kullanın
 
 ```
-docker run -it exorde-cli -m metamask -l 2
+docker run -d --restart unless-stopped --pull always --name exorde-cli exordelabs/exorde-cli -m metamaskadresi -l 3
+```
+
+* Üstteki komut nodumuzun arkaplanda dursa bile kendini yeniden başlatıp çalışmasını sağlıyor. Loglarını görmek için bu komutu girmemiz lazım.
+```
+docker logs --follow exorde-cli
 ```
 
 ## Ve gördüğünüz gibi çalışıyor:
@@ -82,6 +87,41 @@ docker run -it exorde-cli -m metamask -l 2
  * Çalıştığını nasıl anlayacağız? Notlar kısmında ki hatayı vermeyip node calısıyorsa işlem tamamdır. 
 
 ![image](https://user-images.githubusercontent.com/101149671/201302924-3d6c7127-6343-47fc-853b-353715b3e018.png)
+
+## Bildiğiniz üzere sürekli yeni güncellemeler geliyor. Peki biz her güncelleme geldiğinde yeniden mi yapıcaz her şeyi? Hayır.
+
+ * Güncelleme geldiğinde başlatırken kullandığımız komut sayesinde nodumuz zaten kendi kendini güncelliyor. Bazen güncellemeyle birlikte takılmalar olabiliyor o yüzden böyle bir şey olduğunda restart atmamız gerek bunun için bu kodu kullanıyoruz: (Screen içi dışı fark etmez.)
+
+```
+docker restart dockerismi
+```
+
+ * Örnek olarak:
+```
+docker restart exorde-cli
+```
+
+ * Loglar durmuş olabilir. Görmek için yeniden log komutunu girmemiz gerekiyor.(Screen içinde)
+```
+docker logs --follow exorde-cli
+```
+ 
+## Diyelim ki nodunuzu çalıştırdınız ve tek sunucuda birden fazla kurmak istiyorsunuz o zaman bu adımları inceleyin.(Hepsinde aynı cüzdanı kullanın.) (Ekibin söylediğine göre 1 sunucuda 5-8 arası çalıştırabilirsiniz serbest.)
+
+* Öncelikle yeni bir screen açıyoruz. İlk screenden çıktıktan sonra yapın. Ben ismini 2,3,4 diye devam ettiriyorum siz farklı yapabilirsiniz.
+```
+screen -S exorde2
+```
+* Daha sonra yeniden çalıştırma kodunu giriyoruz ama bu sefer --name'den sonra gelen kısmı keyfimize göre değiştiriyoruz. Ben exorde-cli2 yaptım.
+```
+docker run -d --restart unless-stopped --pull always --name exorde-cli2 exordelabs/exorde-cli -m metamaskadresi -l 3
+```
+* İsmi farklı olduğundan loglarını görmek için buna koyduğumuz isimle log komutunu giriyoruz.
+```
+docker logs --follow exorde-cli2
+```
+* Artık 2.modülümüz kurulmuş oluyor. Gösterdiğim gibi isimleri değiştirdikçe farklı modüller kurabilirsiniz.
+
 
 
 ## Gerekli komutlar:
@@ -96,6 +136,11 @@ screen -S screenadı
 
 ```
 screen -r screenadı
+```
+
+ * Screenden çıkma:
+```
+CTRL + A + D
 ```
 
  * Screenleri görme:
@@ -119,8 +164,4 @@ pkill screen
 ## Böylede bir tokenomics var, detaylı incelemedim:
 
 ![image](https://user-images.githubusercontent.com/101149671/201303557-755bcdc8-47f6-4a3e-a1a1-941e62342a37.png)
-
-
-
-
 
